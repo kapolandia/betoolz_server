@@ -7,6 +7,8 @@ const allowedOrigins = [
   // "https://freelance-app-nu.vercel.app",
   "https://be-tools.vercel.app",
   "http://127.0.0.1:5500",
+  "https://betools-bbbcc.web.app",
+  "https://betoolz",
 ];
 const corsOptions = {
   credentials: true,
@@ -72,9 +74,9 @@ app.post("/api/create-checkout-session", async (req, res) => {
   try {
     const { price, baseUrl } = req.body;
     const YOUR_DOMAIN =
-      baseUrl == "http://127.0.0.1:5500"
-        ? "http://127.0.0.1:5500/public"
-        : "https://be-tools.vercel.app";
+      baseUrl == "https://betools-bbbcc.web.app"
+        ? "https://betools-bbbcc.web.app/public"
+        : "https://betoolz.vercel.app";
 
     console.log(YOUR_DOMAIN, "sss");
     const session = await stripe.checkout.sessions.create({
