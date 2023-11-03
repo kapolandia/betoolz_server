@@ -95,7 +95,7 @@ app.post("/api/create-checkout-session", async (req, res) => {
       ],
       mode: "payment",
       success_url: `https://betoolz.it/landing.html`,
-      cancel_url: `${YOUR_DOMAIN}/plan.html`,
+      cancel_url: `https://betoolz.it/plan.html`,
     });
 
     console.log(session, session.payment_status, "session");
