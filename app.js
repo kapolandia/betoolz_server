@@ -8,7 +8,7 @@ const allowedOrigins = [
   "https://be-tools.vercel.app",
   "http://127.0.0.1:5500",
   "https://betools-bbbcc.web.app",
-  "https://betoolz",
+  "https://betoolz.it",
 ];
 const corsOptions = {
   credentials: true,
@@ -95,7 +95,7 @@ app.post("/api/create-checkout-session", async (req, res) => {
       ],
       mode: "payment",
       success_url: `${YOUR_DOMAIN}/landing.html`,
-      cancel_url: `${YOUR_DOMAIN}/freelanding.html`,
+      cancel_url: `${YOUR_DOMAIN}/plan.html`,
     });
 
     console.log(session, session.payment_status, "session");
