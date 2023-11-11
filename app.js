@@ -41,7 +41,7 @@ app.post(
       event = stripe.webhooks.constructEvent(
         req.body,
         sig,
-        "sk_test_51KaNE3D8BZHENOaQ9K7yla6kLMtPsXp2Sy2uaq0sG81cGHMQPa0M2xOIOUYCSqYLpr2cw7citBh0Cr5MkhGXzmmg00WXagaYT0"
+        "pk_live_51O4vmXDDGGxf05cwbUVbshzCcKVFJtXV8aFLATmwyyZX5FTAU82h3cnu5yX2uxRWkZjaPwgfPnBRenZ5JEN1rPHl00xH02Q0rd"
       );
     } catch (err) {
       return res.status(400).send(`Webhook Error: ${err.message}`);
