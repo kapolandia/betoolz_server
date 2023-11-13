@@ -1,6 +1,6 @@
 const express = require("express");
 const stripe = require("stripe")(
-  "sk_test_51KaNE3D8BZHENOaQ9K7yla6kLMtPsXp2Sy2uaq0sG81cGHMQPa0M2xOIOUYCSqYLpr2cw7citBh0Cr5MkhGXzmmg00WXagaYT0"
+  "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"
 );
 const cors = require("cors");
 const allowedOrigins = [
@@ -17,7 +17,7 @@ const corsOptions = {
   allowedHeaders: "Content-Type, Authorization, Cookie",
 };
 const app = express();
-app.use(express.static("public"));
+app.use(express.static("public"));ì
 app.use(cors(corsOptions));
 app.use(express.json());
 
