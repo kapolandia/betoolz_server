@@ -12,7 +12,7 @@ const allowedOrigins = [
 ];
 const corsOptions = {
   credentials: true,
-  origin: allowedOrigins,
+  origin: "*",
   methods: "GET, POST, PUT, DELETE",
   allowedHeaders: "*",
 };
