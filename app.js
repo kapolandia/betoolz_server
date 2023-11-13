@@ -14,7 +14,7 @@ const corsOptions = {
   credentials: true,
   origin: allowedOrigins,
   methods: "GET, POST, PUT, DELETE",
-  allowedHeaders: "Content-Type, Authorization, Cookie",
+  allowedHeaders: "*",
 };
 const app = express();
 app.use(express.static("public"));ì
