@@ -1,6 +1,6 @@
 const express = require("express");
 const stripe = require("stripe")(
-  "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"
+  "sk_test_51O4vmXDDGGxf05cwtIc8kLSabxQAYUDgJwfk7QdlW7CIFz6X0bsK5FX6I2wnR5UMueiD149w5KppUNwchEtUpxCe00w4OcaJfZ"
 );
 const cors = require("cors");
 
@@ -43,7 +43,7 @@ app.post(
       event = stripe.webhooks.constructEvent(
         req.body,
         sig,
-        "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"
+        "pk_test_51O4vmXDDGGxf05cwLjOdvQWaBh69IO0vO1yPTQp7asXW3Yll5scx3Fx2fqaDOwHGR3CR6jCUsdIHtbZnBmypMlPb00xx5qPtwU"
       );
     } catch (err) {
       return res.status(400).send(`Webhook Error: ${err.message}`);
