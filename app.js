@@ -89,7 +89,7 @@ app.post("/api/create-checkout-session", async (req, res) => {
             product_data: {
               name: "Premium Subscription",
             },
-            unit_amount: price * 10,
+            unit_amount: price * 100,
           },
           quantity: 1,
         },
