@@ -97,9 +97,9 @@ app.post("/api/create-checkout-session", async (req, res) => {
   try {
     const { price, baseUrl, userEmail } = req.body;
     const YOUR_DOMAIN =
-      baseUrl == "http://127.0.0.1:5500"
-        ? "http://127.0.0.1:5500/public"
-        : "https://betoolz.vercel.app";
+    baseUrl == "https://betoolz.it"
+      ? "https://betoolz.it"  // Use betoolz.it as the base URL
+      : "https://betoolz.vercel.app";
 
     let customer = await getCustomerByEmail(userEmail);
 
@@ -120,8 +120,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
       ],
       mode: "subscription",
       customer: customer.id,
-      success_url: `${YOUR_DOMAIN}/landing.html`,
-      cancel_url: `${YOUR_DOMAIN}/freelanding.html`,
+      success_url: `https://betoolz.it/landing.html`,
+      cancel_url: `https://betoolz.it/freelanding.html`,
     });
 
     res.json({
