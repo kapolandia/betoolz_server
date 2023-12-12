@@ -113,7 +113,7 @@ app.post("/api/create-checkout-session", async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: [
-        {          
+        {
           price: price,
           quantity: 1,
         },
@@ -122,6 +122,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
       customer: customer.id,
       success_url: `https://betoolz.it/landing.html`,
       cancel_url: `https://betoolz.it/freelanding.html`,
+      allow_promotion_codes: true,
+
     });
 
     res.json({
