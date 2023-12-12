@@ -116,7 +116,6 @@ app.post("/api/create-checkout-session", async (req, res) => {
         {
           price: price,
           quantity: 1,
-          allow_promotion_codes: true,
         },
       ],
       mode: "subscription",
