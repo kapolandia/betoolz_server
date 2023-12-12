@@ -114,7 +114,6 @@ app.post("/api/create-checkout-session", async (req, res) => {
       payment_method_types: ["card"],
       line_items: [
         {          
-          "allow_promotion_codes": true,
           price: price,
           quantity: 1,
         },
